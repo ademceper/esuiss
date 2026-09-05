@@ -1,11 +1,11 @@
-import typescriptEslint from "typescript-eslint";
-import reactRefresh from "eslint-plugin-react-refresh";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import eslintConfigPrettier from "eslint-config-prettier";
-import globals from "globals";
-import js from "@eslint/js";
-import storybook from "eslint-plugin-storybook";
+import js from "@eslint/js"
+import eslintConfigPrettier from "eslint-config-prettier"
+import react from "eslint-plugin-react"
+import reactHooks from "eslint-plugin-react-hooks"
+import reactRefresh from "eslint-plugin-react-refresh"
+import storybook from "eslint-plugin-storybook"
+import globals from "globals"
+import typescriptEslint from "typescript-eslint"
 
 export default typescriptEslint.config(
   js.configs.recommended,
@@ -33,7 +33,10 @@ export default typescriptEslint.config(
       },
     },
     rules: {
-      "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
       "react-hooks/exhaustive-deps": "off",
       "@typescript-eslint/no-redeclare": "off",
       "no-labels": "off",
@@ -44,5 +47,5 @@ export default typescriptEslint.config(
     rules: {
       "import/no-anonymous-default-export": "off",
     },
-  },
-);
+  }
+)

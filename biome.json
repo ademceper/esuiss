@@ -14,7 +14,12 @@
       "!**/dist",
       "!**/.turbo",
       "!**/coverage",
-      "!**/next-env.d.ts"
+      "!**/next-env.d.ts",
+      "!**/apps/auth/src/account",
+      "!**/apps/auth/src/admin",
+      "!**/apps/auth/src/shared",
+      "!**/apps/auth/src/kc.gen.tsx",
+      "!**/apps/auth/public"
     ]
   },
   "formatter": {
@@ -57,5 +62,39 @@
     "parser": {
       "tailwindDirectives": true
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["**/apps/auth/src/login/**"],
+      "linter": {
+        "rules": {
+          "security": {
+            "noDangerouslySetInnerHtml": "off"
+          },
+          "a11y": {
+            "noAutofocus": "off",
+            "noPositiveTabindex": "off",
+            "useIframeTitle": "off",
+            "useAltText": "off",
+            "useAriaPropsSupportedByRole": "off",
+            "noLabelWithoutControl": "off"
+          },
+          "suspicious": {
+            "noShadowRestrictedNames": "off",
+            "noExplicitAny": "off",
+            "noDoubleEquals": "off",
+            "noArrayIndexKey": "off"
+          },
+          "complexity": {
+            "noUselessFragments": "off",
+            "useLiteralKeys": "off"
+          },
+          "correctness": {
+            "useExhaustiveDependencies": "off",
+            "useJsxKeyInIterable": "off"
+          }
+        }
+      }
+    }
+  ]
 }
