@@ -120,6 +120,19 @@
           }
         }
       }
+    },
+    {
+      "includes": ["**/packages/uim/src/**"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "noUselessFragments": "off"
+          },
+          "suspicious": {
+            "noUnknownAtRules": "off"
+          }
+        }
+      }
     }
   ]
 }

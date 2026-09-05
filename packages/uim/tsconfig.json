@@ -1,0 +1,10 @@
+{
+  "extends": "@suiss/config/react-library.json",
+  "compilerOptions": {
+    "paths": {
+      "@suiss/uim/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "nativewind-env.d.ts", "tailwind.config.js"],
+  "exclude": ["node_modules"]
+}
