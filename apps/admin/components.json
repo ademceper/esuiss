@@ -1,20 +1,20 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
   "style": "radix-maia",
-  "rsc": true,
+  "rsc": false,
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "src/styles/globals.css",
+    "css": "../../packages/ui/src/styles/globals.css",
     "baseColor": "neutral",
     "cssVariables": true
   },
   "iconLibrary": "phosphor",
   "aliases": {
-    "components": "@suiss/ui/components",
+    "components": "@/components",
+    "hooks": "@/hooks",
+    "lib": "@/lib",
     "utils": "@suiss/ui/lib/utils",
-    "hooks": "@suiss/ui/hooks",
-    "lib": "@suiss/ui/lib",
     "ui": "@suiss/ui/components"
   },
   "rtl": true,

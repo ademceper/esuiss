@@ -1,0 +1,11 @@
+{
+  "extends": "@suiss/config/vite.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@suiss/ui/*": ["../../packages/ui/src/*"]
+    }
+  },
+  "include": ["src", "vite.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
