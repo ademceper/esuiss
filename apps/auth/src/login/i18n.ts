@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { i18nBuilder } from "keycloakify/login"
 import type { ThemeName } from "../kc.gen"
 
