@@ -102,6 +102,9 @@ importers:
       '@patternfly/react-table':
         specifier: ^5.4.16
         version: 5.4.16(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@suiss/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@uiw/react-textarea-code-editor':
         specifier: ^3.1.1
         version: 3.1.1(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -163,6 +166,9 @@ importers:
       '@suiss/config':
         specifier: workspace:*
         version: link:../../packages/config
+      '@tailwindcss/vite':
+        specifier: ^4.3.3
+        version: 4.3.3(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0))
       '@types/file-saver':
         specifier: ^2.0.7
         version: 2.0.7
@@ -7504,6 +7510,13 @@ snapshots:
       '@tailwindcss/oxide': 4.3.0
       postcss: 8.5.15
       tailwindcss: 4.3.0
+
+  '@tailwindcss/vite@4.3.3(vite@5.4.21(@types/node@24.13.3)(lightningcss@1.33.0))':
+    dependencies:
+      '@tailwindcss/node': 4.3.3
+      '@tailwindcss/oxide': 4.3.3
+      tailwindcss: 4.3.3
+      vite: 5.4.21(@types/node@24.13.3)(lightningcss@1.33.0)
 
   '@tailwindcss/vite@4.3.3(vite@8.2.2(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0))':
     dependencies:

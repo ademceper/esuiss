@@ -35,7 +35,6 @@ import { ResetCredentialDialog } from "./user-credentials/ResetCredentialDialog"
 import { ResetPasswordDialog } from "./user-credentials/ResetPasswordDialog";
 import useFormatDate from "../utils/useFormatDate";
 
-import "./user-credentials.css";
 
 type UserCredentialsProps = {
   user: UserRepresentation;

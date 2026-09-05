@@ -33,7 +33,6 @@ import { ProviderType, toKeyProvider } from "../routes/KeyProvider";
 import { KeyProviderModal } from "./key-providers/KeyProviderModal";
 import { KeyProvidersPicker } from "./key-providers/KeyProvidersPicker";
 
-import "../realm-settings-section.css";
 
 type ComponentData = KeyMetadataRepresentation & {
   id?: string;

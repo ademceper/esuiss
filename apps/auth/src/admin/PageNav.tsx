@@ -22,7 +22,6 @@ import { routes } from "./routes";
 import { resolveDisplayName } from "./util";
 import useIsFeatureEnabled, { Feature } from "./utils/useIsFeatureEnabled";
 
-import "./page-nav.css";
 
 type LeftNavProps = {
   title: string;

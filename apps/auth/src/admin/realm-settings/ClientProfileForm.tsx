@@ -47,7 +47,6 @@ import { toClientPolicies } from "./routes/ClientPolicies";
 import { ClientProfileParams, toClientProfile } from "./routes/ClientProfile";
 import { toExecutor } from "./routes/Executor";
 
-import "./realm-settings-section.css";
 
 type ClientProfileForm = Required<ClientProfileRepresentation>;
 

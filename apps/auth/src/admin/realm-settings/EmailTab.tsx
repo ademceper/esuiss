@@ -32,7 +32,6 @@ import { emailRegexPattern } from "../util";
 import { useCurrentUser } from "../utils/useCurrentUser";
 import useToggle from "../utils/useToggle";
 
-import "./realm-settings-section.css";
 
 type RealmSettingsEmailTabProps = {
   realm: RealmRepresentation;

@@ -14,8 +14,6 @@ import { Fragment, ReactNode, useEffect, useMemo, useState } from "react";
 import { FormPanel } from "./FormPanel";
 import { ScrollPanel } from "./ScrollPanel";
 
-import style from "./scroll-form.module.css";
-
 export const mainPageContentId = "kc-main-content-page-container";
 
 type ScrollSection = {
@@ -82,7 +80,6 @@ export const ScrollForm = ({
                 <FormPanel
                   scrollId={scrollId}
                   title={title}
-                  className={style.panel}
                 >
                   {panel}
                 </FormPanel>
@@ -96,7 +93,7 @@ export const ScrollForm = ({
         })}
       </GridItem>
       <GridItem md={4} sm={12} order={{ default: "-1", md: "1" }}>
-        <PageSection className={style.sticky}>
+        <PageSection>
           <JumpLinks isVertical label={label}>
             {shownSections.map(({ title }, index) => {
               const scrollId = spacesToHyphens(title.toLowerCase());

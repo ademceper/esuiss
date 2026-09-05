@@ -40,7 +40,6 @@ import { useParams } from "../../utils/useParams";
 import { toAuthorizationTab } from "../routes/AuthenticationTab";
 import { ResourceDetailsParams, toResourceDetails } from "../routes/Resource";
 import { ScopePicker } from "./ScopePicker";
-import "./resource-details.css";
 
 type SubmittedResource = Omit<
   ResourceRepresentation,

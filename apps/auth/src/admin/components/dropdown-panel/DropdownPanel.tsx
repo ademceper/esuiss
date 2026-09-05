@@ -5,7 +5,6 @@
 import { useEffect, useRef } from "react";
 import { Icon } from "../../../shared/@patternfly/react-core";
 import { CaretDownIcon } from "../../../shared/@patternfly/react-icons";
-import "./dropdown-panel.css";
 
 type DropdownPanelProps = {
   buttonText: string;

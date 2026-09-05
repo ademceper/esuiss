@@ -34,7 +34,6 @@ import useToggle from "../../utils/useToggle";
 import { getProtocolName } from "../utils";
 import useIsFeatureEnabled, { Feature } from "../../utils/useIsFeatureEnabled";
 
-import "./client-scopes.css";
 
 export type AddScopeDialogProps = {
   clientScopes: ClientScopeRepresentation[];

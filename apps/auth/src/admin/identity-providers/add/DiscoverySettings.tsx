@@ -11,7 +11,6 @@ import { SelectControl, TextControl } from "../../../shared/keycloak-ui-shared";
 import { DefaultSwitchControl } from "../../components/SwitchControl";
 import { JwksSettings } from "./JwksSettings";
 
-import "./discovery-settings.css";
 
 const PKCE_METHODS = ["plain", "S256"] as const;
 

@@ -50,7 +50,6 @@ import { AddScopeDialog } from "./AddScopeDialog";
 import useIsFeatureEnabled, { Feature } from "../../utils/useIsFeatureEnabled";
 import { PROTOCOL_OIDC, PROTOCOL_OID4VC } from "../constants";
 
-import "./client-scopes.css";
 
 export type ClientScopesProps = {
   clientId: string;

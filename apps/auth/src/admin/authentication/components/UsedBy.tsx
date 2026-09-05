@@ -20,15 +20,13 @@ import { useRealm } from "../../context/realm-context/RealmContext";
 import useToggle from "../../utils/useToggle";
 import { AuthenticationType, REALM_FLOWS } from "../constants";
 
-import style from "./used-by.module.css";
-
 type UsedByProps = {
   authType: AuthenticationType;
 };
 
 const Label = ({ label }: { label: string }) => (
   <>
-    <CheckCircleIcon className={style.label} /> {label}
+    <CheckCircleIcon /> {label}
   </>
 );
 
@@ -140,12 +138,12 @@ export const UsedBy = ({ authType: { id, usedBy } }: UsedByProps) => {
               </div>
             }
           >
-            <Button variant="link" className={style.label}>
+            <Button variant="link">
               <Label label={t(`used.${usedBy.type}`)} />
             </Button>
           </Popover>
         ) : (
-          <Button variant="link" className={style.label} onClick={toggle}>
+          <Button variant="link" onClick={toggle}>
             <Label label={t(`used.${usedBy.type}`)} />
           </Button>
         ))}

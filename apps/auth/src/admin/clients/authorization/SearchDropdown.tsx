@@ -16,7 +16,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import useToggle from "../../utils/useToggle";
 
-import "./search-dropdown.css";
 
 export type SearchForm = {
   name?: string;

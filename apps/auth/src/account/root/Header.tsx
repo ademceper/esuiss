@@ -16,8 +16,6 @@ import { useHref } from "react-router-dom";
 import { AccountEnvironment } from "..";
 import { joinPath } from "../utils/joinPath";
 
-import style from "./header.module.css";
-
 const ReferrerLink = () => {
   const { environment } = useEnvironment<AccountEnvironment>();
   const { t } = useTranslation();
@@ -59,7 +57,6 @@ export const Header = () => {
         href: indexHref,
         src: logoSvgUrl,
         alt: t("logo"),
-        className: style.brand,
       }}
       toolbarItems={[<ReferrerLink key="link" />]}
     />

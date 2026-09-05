@@ -17,7 +17,6 @@ import { AdminEvents } from "./AdminEvents";
 import { UserEvents } from "./UserEvents";
 import { toEvents } from "./routes/Events";
 
-import "./events.css";
 
 export default function EventsSection() {
   const { t } = useTranslation();

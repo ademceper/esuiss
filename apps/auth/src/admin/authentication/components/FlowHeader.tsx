@@ -6,7 +6,6 @@ import { DataListDragButton } from "../../../shared/@patternfly/react-core";
 import { Th, Tr } from "../../../shared/@patternfly/react-table";
 import { useTranslation } from "react-i18next";
 
-import "./flow-header.css";
 
 export const FlowHeader = () => {
   const { t } = useTranslation();

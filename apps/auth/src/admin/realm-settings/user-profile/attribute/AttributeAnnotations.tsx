@@ -11,7 +11,6 @@ import { SCIM_ANNOTATION_KEY } from "./AttributeScimSettings";
 import { KeySelect } from "./KeySelect";
 import { ValueSelect } from "./ValueSelect";
 
-import "../../realm-settings-section.css";
 
 export const AttributeAnnotations = () => {
   const { t } = useTranslation();

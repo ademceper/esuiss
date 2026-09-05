@@ -9,7 +9,6 @@ import { useTranslation } from "react-i18next";
 import { FormAccess } from "../../components/form/FormAccess";
 import { HelpLinkTextInput } from "./HelpLinkTextInput";
 
-import "./security-defences.css";
 
 type HeadersFormProps = {
   realm: RealmRepresentation;

@@ -10,7 +10,6 @@ import type { KeyValueType } from "./key-value-convert";
 import { KeyValueInput } from "./KeyValueInput";
 import { FixedButtonsGroup } from "../form/FixedButtonGroup";
 
-import "./AttributeForm.css";
 
 export type AttributeForm = Omit<RoleRepresentation, "attributes"> & {
   attributes?: KeyValueType[];

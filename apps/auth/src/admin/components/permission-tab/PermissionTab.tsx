@@ -37,7 +37,6 @@ import type { Environment } from "../../environment-types";
 import useLocaleSort from "../../utils/useLocaleSort";
 import { useConfirmDialog } from "../confirm-dialog/ConfirmDialog";
 
-import "./permissions-tab.css";
 
 type PermissionScreenType =
   | "clients"

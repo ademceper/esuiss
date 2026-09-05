@@ -9,7 +9,6 @@ import { useTranslation } from "react-i18next";
 import { FormAccess } from "../../../components/form/FormAccess";
 import { HelpItem } from "../../../../shared/keycloak-ui-shared";
 
-import "../../realm-settings-section.css";
 
 const Permissions = ({ name }: { name: string }) => {
   const { t } = useTranslation();

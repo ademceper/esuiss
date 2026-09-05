@@ -18,7 +18,6 @@ import { Controller, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { FormErrorText, HelpItem } from "../../../shared/keycloak-ui-shared";
 
-import "./policy-row.css";
 
 type PolicyRowProps = {
   policy: PasswordPolicyTypeRepresentation;

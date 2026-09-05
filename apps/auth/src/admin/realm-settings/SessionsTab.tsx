@@ -16,7 +16,6 @@ import { FormPanel, HelpItem } from "../../shared/keycloak-ui-shared";
 import { FormAccess } from "../components/form/FormAccess";
 import { TimeSelector } from "../components/time-selector/TimeSelector";
 
-import "./realm-settings-section.css";
 
 type RealmSettingsSessionsTabProps = {
   realm: RealmRepresentation;

@@ -15,7 +15,6 @@ import { FlowRequirementDropdown } from "./FlowRequirementDropdown";
 import { FlowTitle } from "./FlowTitle";
 import type { Flow } from "./modals/AddSubFlowModal";
 
-import "./flow-row.css";
 
 type FlowRowProps = {
   builtIn: boolean;

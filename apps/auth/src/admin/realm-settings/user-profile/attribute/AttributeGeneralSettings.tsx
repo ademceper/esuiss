@@ -37,7 +37,6 @@ import { USERNAME_EMAIL } from "../../NewAttributeSettings";
 import { AttributeParams } from "../../routes/Attribute";
 import { TranslatableField } from "./TranslatableField";
 
-import "../../realm-settings-section.css";
 import useLocaleSort, { mapByKey } from "../../../utils/useLocaleSort";
 
 const REQUIRED_FOR = [

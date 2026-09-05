@@ -39,7 +39,6 @@ import { toAddClientPolicy } from "./routes/AddClientPolicy";
 import { toClientPolicies } from "./routes/ClientPolicies";
 import { toEditClientPolicy } from "./routes/EditClientPolicy";
 
-import "./realm-settings-section.css";
 
 type ClientPolicy = ClientPolicyRepresentation & {
   global?: boolean;

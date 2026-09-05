@@ -7,7 +7,6 @@ import { i18n } from "./i18n/i18n";
 import { Root } from "./Root";
 import { routes } from "./routes";
 
-import "./index.css";
 
 document.title = "Keycloak Administration Console";
 

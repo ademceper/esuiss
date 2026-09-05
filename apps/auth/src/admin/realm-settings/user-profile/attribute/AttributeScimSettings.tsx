@@ -11,7 +11,6 @@ import { useParams } from "../../../utils/useParams";
 import type { AttributeParams } from "../../routes/Attribute";
 import { useUserProfile } from "../UserProfileContext";
 
-import "../../realm-settings-section.css";
 import { useState } from "react";
 
 const SCIM_CORE_ATTRIBUTES = [

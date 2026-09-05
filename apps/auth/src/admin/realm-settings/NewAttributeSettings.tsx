@@ -40,7 +40,6 @@ import {
 } from "./user-profile/attribute/AttributeScimSettings";
 import { AttributeValidations } from "./user-profile/attribute/AttributeValidations";
 
-import "./realm-settings-section.css";
 
 type IndexedAnnotations = {
   key: string;

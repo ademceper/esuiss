@@ -30,7 +30,6 @@ import { TimeSelectorControl } from "../../components/time-selector/TimeSelector
 import { useRealm } from "../../context/realm-context/RealmContext";
 import useLocaleSort from "../../utils/useLocaleSort";
 
-import "./otp-policy.css";
 
 const POLICY_TYPES = ["totp", "hotp"] as const;
 const OTP_HASH_ALGORITHMS = ["SHA1", "SHA256", "SHA512"] as const;

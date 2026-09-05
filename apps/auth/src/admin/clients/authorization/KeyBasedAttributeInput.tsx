@@ -13,7 +13,6 @@ import { Controller, useFieldArray, useFormContext } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { defaultContextAttributes } from "../utils";
 
-import "./key-based-attribute-input.css";
 
 export type AttributeType = {
   key?: string;

@@ -38,7 +38,6 @@ import { prettyPrintJSON } from "../util";
 import { toAddClientProfile } from "./routes/AddClientProfile";
 import { toClientProfile } from "./routes/ClientProfile";
 
-import "./realm-settings-section.css";
 
 type ClientProfile = ClientProfileRepresentation & {
   global: boolean;

@@ -43,7 +43,6 @@ import { toGroups } from "../routes/Groups";
 import { DeleteGroup } from "./DeleteGroup";
 import { MoveDialog } from "./MoveDialog";
 
-import "./group-tree.css";
 
 type ExtendedTreeViewDataItem = TreeViewDataItem & {
   access?: Record<string, boolean>;
