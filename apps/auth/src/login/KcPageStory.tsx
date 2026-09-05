@@ -8,8 +8,14 @@ import type {
 } from "./KcContext"
 import KcPage from "./KcPage"
 
+const [themeName] = themeNames
+
+if (themeName === undefined) {
+  throw new Error("kc.gen.tsx did not generate any theme name")
+}
+
 const kcContextExtension: KcContextExtension = {
-  themeName: themeNames[0],
+  themeName,
   properties: {
     ...kcEnvDefaults,
   },
