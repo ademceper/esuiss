@@ -26,4 +26,6 @@ config.resolver.blockList = [
   /\/\.turbo\/.*/,
 ]
 
-module.exports = withNativeWind(config, { input: "./global.css" })
+module.exports = withNativeWind(config, {
+  input: "../../packages/uim/src/styles/global.css",
+})

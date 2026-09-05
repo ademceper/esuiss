@@ -1,4 +1,4 @@
-import "@/../global.css"
+import "@suiss/uim/global.css"
 
 import { Stack } from "expo-router"
 import { StatusBar } from "expo-status-bar"
