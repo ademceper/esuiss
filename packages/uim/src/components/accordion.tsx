@@ -94,7 +94,7 @@ function AccordionTrigger({
               <Icon
                 as={CaretDown}
                 size={16}
-                className={"text-muted-foreground shrink-0"}
+                className={"shrink-0 text-muted-foreground"}
               />
             </Animated.View>
           </Pressable>

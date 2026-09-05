@@ -22,7 +22,7 @@ function ToggleGroup({
     <ToggleGroupPrimitive.Root
       className={cn(
         "flex flex-row items-center rounded-md shadow-none",
-        variant === "outline" && "shadow-sm shadow-black/5",
+        variant === "outline" && "shadow-black/5 shadow-sm",
         className
       )}
       {...props}
@@ -63,7 +63,7 @@ function ToggleGroupItem({
   return (
     <TextClassContext.Provider
       value={cn(
-        "text-sm text-foreground font-medium",
+        "font-medium text-foreground text-sm",
         ToggleGroupPrimitive.utils.getIsSelected(value, props.value) &&
           "text-accent-foreground"
       )}

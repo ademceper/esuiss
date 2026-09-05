@@ -8,7 +8,7 @@ function Switch({
   return (
     <SwitchPrimitives.Root
       className={cn(
-        "flex h-[1.15rem] w-8 shrink-0 flex-row items-center rounded-full border border-transparent shadow-sm shadow-black/5",
+        "flex h-[1.15rem] w-8 shrink-0 flex-row items-center rounded-full border border-transparent shadow-black/5 shadow-sm",
         props.checked ? "bg-primary" : "bg-input dark:bg-input/80",
         props.disabled && "opacity-50",
         className
@@ -17,10 +17,10 @@ function Switch({
     >
       <SwitchPrimitives.Thumb
         className={cn(
-          "bg-background size-4 rounded-full transition-transform",
+          "size-4 rounded-full bg-background transition-transform",
           props.checked
-            ? "dark:bg-primary-foreground translate-x-3.5"
-            : "dark:bg-foreground translate-x-0"
+            ? "translate-x-3.5 dark:bg-primary-foreground"
+            : "translate-x-0 dark:bg-foreground"
         )}
       />
     </SwitchPrimitives.Root>

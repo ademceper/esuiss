@@ -49,7 +49,7 @@ function Menubar({
       ) : null}
       <MenubarPrimitive.Root
         className={cn(
-          "bg-background border-border flex h-10 flex-row items-center gap-1 rounded-md border p-1 shadow-sm shadow-black/5 sm:h-9",
+          "flex h-10 flex-row items-center gap-1 rounded-md border border-border bg-background p-1 shadow-black/5 shadow-sm sm:h-9",
           className
         )}
         value={value ?? valueProp}
@@ -70,7 +70,7 @@ function MenubarTrigger({
   return (
     <TextClassContext.Provider
       value={cn(
-        "text-sm font-medium select-none group-active:text-accent-foreground",
+        "select-none font-medium text-sm group-active:text-accent-foreground",
         value === itemValue && "text-accent-foreground"
       )}
     >
@@ -102,13 +102,13 @@ function MenubarSubTrigger({
   return (
     <TextClassContext.Provider
       value={cn(
-        "text-sm select-none group-active:text-accent-foreground",
+        "select-none text-sm group-active:text-accent-foreground",
         open && "text-accent-foreground"
       )}
     >
       <MenubarPrimitive.SubTrigger
         className={cn(
-          "active:bg-accent group flex flex-row items-center rounded-sm px-2 py-2 sm:py-1.5",
+          "group flex flex-row items-center rounded-sm px-2 py-2 active:bg-accent sm:py-1.5",
           className,
           open && "bg-accent",
           inset && "pl-8"
@@ -119,7 +119,7 @@ function MenubarSubTrigger({
         <Icon
           as={icon}
           className={cn(
-            "text-foreground ml-auto size-4 shrink-0",
+            "ml-auto size-4 shrink-0 text-foreground",
             iconClassName
           )}
         />
@@ -136,7 +136,7 @@ function MenubarSubContent({
     <NativeOnlyAnimatedView entering={FadeIn.reduceMotion(ReduceMotion.System)}>
       <MenubarPrimitive.SubContent
         className={cn(
-          "bg-popover border-border overflow-hidden rounded-md border p-1 shadow-lg shadow-black/5",
+          "overflow-hidden rounded-md border border-border bg-popover p-1 shadow-black/5 shadow-lg",
           className
         )}
         {...props}
@@ -168,7 +168,7 @@ function MenubarContent({
           <TextClassContext.Provider value="text-popover-foreground">
             <MenubarPrimitive.Content
               className={cn(
-                "bg-popover border-border min-w-[12rem] overflow-hidden rounded-md border p-1 shadow-lg shadow-black/5",
+                "min-w-[12rem] overflow-hidden rounded-md border border-border bg-popover p-1 shadow-black/5 shadow-lg",
                 className
               )}
               align={align}
@@ -196,14 +196,14 @@ function MenubarItem({
   return (
     <TextClassContext.Provider
       value={cn(
-        "select-none text-sm text-popover-foreground group-active:text-popover-foreground",
+        "select-none text-popover-foreground text-sm group-active:text-popover-foreground",
         variant === "destructive" &&
           "text-destructive group-active:text-destructive"
       )}
     >
       <MenubarPrimitive.Item
         className={cn(
-          "active:bg-accent group relative flex flex-row items-center gap-2 rounded-sm px-2 py-2 sm:py-1.5",
+          "group relative flex flex-row items-center gap-2 rounded-sm px-2 py-2 active:bg-accent sm:py-1.5",
           variant === "destructive" &&
             "active:bg-destructive/10 dark:active:bg-destructive/20",
           props.disabled && "opacity-50",
@@ -227,7 +227,7 @@ function MenubarCheckboxItem({
     <TextClassContext.Provider value="text-sm text-popover-foreground select-none group-active:text-accent-foreground">
       <MenubarPrimitive.CheckboxItem
         className={cn(
-          "active:bg-accent group relative flex flex-row items-center gap-2 rounded-sm py-2 pl-8 pr-2 sm:py-1.5",
+          "group relative flex flex-row items-center gap-2 rounded-sm py-2 pr-2 pl-8 active:bg-accent sm:py-1.5",
           props.disabled && "opacity-50",
           className
         )}
@@ -235,7 +235,7 @@ function MenubarCheckboxItem({
       >
         <View className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
           <MenubarPrimitive.ItemIndicator>
-            <Icon as={Check} className={"text-foreground size-4"} />
+            <Icon as={Check} className={"size-4 text-foreground"} />
           </MenubarPrimitive.ItemIndicator>
         </View>
         <>{children}</>
@@ -255,7 +255,7 @@ function MenubarRadioItem({
     <TextClassContext.Provider value="text-sm text-popover-foreground select-none group-active:text-accent-foreground">
       <MenubarPrimitive.RadioItem
         className={cn(
-          "active:bg-accent group relative flex flex-row items-center gap-2 rounded-sm py-2 pl-8 pr-2 sm:py-1.5",
+          "group relative flex flex-row items-center gap-2 rounded-sm py-2 pr-2 pl-8 active:bg-accent sm:py-1.5",
           props.disabled && "opacity-50",
           className
         )}
@@ -263,7 +263,7 @@ function MenubarRadioItem({
       >
         <View className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
           <MenubarPrimitive.ItemIndicator>
-            <View className="bg-foreground h-2 w-2 rounded-full" />
+            <View className="h-2 w-2 rounded-full bg-foreground" />
           </MenubarPrimitive.ItemIndicator>
         </View>
         <>{children}</>
@@ -283,7 +283,7 @@ function MenubarLabel({
   return (
     <MenubarPrimitive.Label
       className={cn(
-        "text-foreground px-2 py-2 text-sm font-medium sm:py-1.5",
+        "px-2 py-2 font-medium text-foreground text-sm sm:py-1.5",
         inset && "pl-8",
         className
       )}
@@ -298,7 +298,7 @@ function MenubarSeparator({
 }: React.ComponentProps<typeof MenubarPrimitive.Separator>) {
   return (
     <MenubarPrimitive.Separator
-      className={cn("bg-border -mx-1 my-1 h-px", className)}
+      className={cn("-mx-1 my-1 h-px bg-border", className)}
       {...props}
     />
   )
@@ -311,7 +311,7 @@ function MenubarShortcut({
   return (
     <Text
       className={cn(
-        "text-muted-foreground ml-auto text-xs tracking-widest",
+        "ml-auto text-muted-foreground text-xs tracking-widest",
         className
       )}
       {...props}

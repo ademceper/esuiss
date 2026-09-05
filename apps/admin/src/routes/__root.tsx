@@ -4,7 +4,7 @@ export const Route = createRootRoute({ component: RootLayout })
 
 function RootLayout() {
   return (
-    <div className="bg-background text-foreground min-h-svh">
+    <div className="min-h-svh bg-background text-foreground">
       <Outlet />
     </div>
   )

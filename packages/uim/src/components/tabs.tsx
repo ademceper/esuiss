@@ -21,7 +21,7 @@ function TabsList({
   return (
     <TabsPrimitive.List
       className={cn(
-        "bg-muted flex h-9 flex-row items-center justify-center rounded-lg p-[3px]",
+        "flex h-9 flex-row items-center justify-center rounded-lg bg-muted p-[3px]",
         "mr-auto",
         className
       )}
@@ -38,13 +38,13 @@ function TabsTrigger({
   return (
     <TextClassContext.Provider
       value={cn(
-        "text-foreground dark:text-muted-foreground text-sm font-medium",
+        "font-medium text-foreground text-sm dark:text-muted-foreground",
         value === props.value && "dark:text-foreground"
       )}
     >
       <TabsPrimitive.Trigger
         className={cn(
-          "flex h-[calc(100%-1px)] flex-row items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 shadow-none shadow-black/5",
+          "flex h-[calc(100%-1px)] flex-row items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 shadow-black/5 shadow-none",
           props.disabled && "opacity-50",
           props.value === value &&
             "bg-background dark:border-foreground/10 dark:bg-input/30",

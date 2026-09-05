@@ -14,7 +14,7 @@ function BubbleGroup({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 const bubbleVariants = cva(
-  "group/bubble relative flex w-fit max-w-[80%] min-w-0 flex-col gap-1 group-data-[align=end]/message:self-end data-[align=end]:self-end data-[variant=ghost]:max-w-full",
+  "group/bubble relative flex w-fit min-w-0 max-w-[80%] flex-col gap-1 data-[variant=ghost]:max-w-full data-[align=end]:self-end group-data-[align=end]/message:self-end",
   {
     variants: {
       variant: {
@@ -73,7 +73,7 @@ function BubbleContent({
     <Comp
       data-slot="bubble-content"
       className={cn(
-        "w-fit max-w-full min-w-0 overflow-hidden rounded-3xl border border-transparent px-3.5 py-2.5 text-sm leading-relaxed wrap-break-word group-data-[align=end]/bubble:self-end [button]:text-start [button,a]:transition-colors [button,a]:outline-none [button,a]:focus-visible:border-ring [button,a]:focus-visible:ring-[3px] [button,a]:focus-visible:ring-ring/50",
+        "wrap-break-word w-fit min-w-0 max-w-full overflow-hidden rounded-3xl border border-transparent px-3.5 py-2.5 text-sm leading-relaxed group-data-[align=end]/bubble:self-end [button,a]:outline-none [button,a]:transition-colors [button,a]:focus-visible:border-ring [button,a]:focus-visible:ring-[3px] [button,a]:focus-visible:ring-ring/50 [button]:text-start",
         className
       )}
       {...props}

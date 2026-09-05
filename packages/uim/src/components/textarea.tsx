@@ -11,7 +11,7 @@ function Textarea({
   return (
     <TextInput
       className={cn(
-        "text-foreground border-input dark:bg-input/30 flex min-h-16 w-full flex-row rounded-md border bg-transparent px-3 py-2 text-base shadow-sm shadow-black/5 md:text-sm",
+        "flex min-h-16 w-full flex-row rounded-md border border-input bg-transparent px-3 py-2 text-base text-foreground shadow-black/5 shadow-sm md:text-sm dark:bg-input/30",
         props.editable === false && "opacity-50",
         className
       )}

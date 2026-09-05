@@ -34,7 +34,7 @@ function AlertDialogOverlay({
     <FullWindowOverlay>
       <AlertDialogPrimitive.Overlay
         className={cn(
-          "absolute bottom-0 left-0 right-0 top-0 z-50 flex items-center justify-center bg-black/50 p-2",
+          "absolute top-0 right-0 bottom-0 left-0 z-50 flex items-center justify-center bg-black/50 p-2",
           className
         )}
         {...props}
@@ -66,7 +66,7 @@ function AlertDialogContent({
       <AlertDialogOverlay>
         <AlertDialogPrimitive.Content
           className={cn(
-            "bg-background border-border z-50 flex w-full max-w-[calc(100%-2rem)] flex-col gap-4 rounded-lg border p-6 shadow-lg shadow-black/5 sm:max-w-lg",
+            "z-50 flex w-full max-w-[calc(100%-2rem)] flex-col gap-4 rounded-lg border border-border bg-background p-6 shadow-black/5 shadow-lg sm:max-w-lg",
             className
           )}
           {...props}
@@ -102,7 +102,7 @@ function AlertDialogTitle({
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
   return (
     <AlertDialogPrimitive.Title
-      className={cn("text-foreground text-lg font-semibold", className)}
+      className={cn("font-semibold text-foreground text-lg", className)}
       {...props}
     />
   )

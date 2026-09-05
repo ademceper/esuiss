@@ -4,20 +4,20 @@ import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
 import { Text as RNText, type Role } from "react-native"
 
-const textVariants = cva("text-foreground text-base", {
+const textVariants = cva("text-base text-foreground", {
   variants: {
     variant: {
       default: "",
-      h1: "text-center text-4xl font-extrabold tracking-tight",
-      h2: "border-border border-b pb-2 text-3xl font-semibold tracking-tight",
-      h3: "text-2xl font-semibold tracking-tight",
-      h4: "text-xl font-semibold tracking-tight",
+      h1: "text-center font-extrabold text-4xl tracking-tight",
+      h2: "border-border border-b pb-2 font-semibold text-3xl tracking-tight",
+      h3: "font-semibold text-2xl tracking-tight",
+      h4: "font-semibold text-xl tracking-tight",
       p: "mt-3 leading-7 sm:mt-6",
       blockquote: "mt-4 border-l-2 pl-3 italic sm:mt-6 sm:pl-6",
-      code: "bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold",
+      code: "relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono font-semibold text-sm",
       lead: "text-muted-foreground text-xl",
-      large: "text-lg font-semibold",
-      small: "text-sm font-medium leading-none",
+      large: "font-semibold text-lg",
+      small: "font-medium text-sm leading-none",
       muted: "text-muted-foreground text-sm",
     },
   },

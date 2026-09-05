@@ -6,13 +6,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
 
 const toggleVariants = cva(
-  "active:bg-muted group flex flex-row items-center justify-center gap-2 rounded-md",
+  "group flex flex-row items-center justify-center gap-2 rounded-md active:bg-muted",
   {
     variants: {
       variant: {
         default: "bg-transparent",
         outline:
-          "border-input active:bg-accent border bg-transparent shadow-sm shadow-black/5",
+          "border border-input bg-transparent shadow-black/5 shadow-sm active:bg-accent",
       },
       size: {
         default: "h-10 min-w-10 px-2.5 sm:h-9 sm:min-w-9 sm:px-2",
@@ -37,7 +37,7 @@ function Toggle({
   return (
     <TextClassContext.Provider
       value={cn(
-        "text-sm text-foreground font-medium",
+        "font-medium text-foreground text-sm",
         props.pressed ? "text-accent-foreground" : className
       )}
     >

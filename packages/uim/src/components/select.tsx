@@ -27,7 +27,7 @@ function SelectValue({
     <SelectPrimitive.Value
       ref={ref}
       className={cn(
-        "text-foreground line-clamp-1 flex flex-row items-center gap-2 text-sm",
+        "line-clamp-1 flex flex-row items-center gap-2 text-foreground text-sm",
         !value && "text-muted-foreground",
         className
       )}
@@ -50,7 +50,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       ref={ref}
       className={cn(
-        "border-input dark:bg-input/30 dark:active:bg-input/50 bg-background flex h-10 flex-row items-center justify-between gap-2 rounded-md border px-3 py-2 shadow-sm shadow-black/5 sm:h-9",
+        "flex h-10 flex-row items-center justify-between gap-2 rounded-md border border-input bg-background px-3 py-2 shadow-black/5 shadow-sm sm:h-9 dark:bg-input/30 dark:active:bg-input/50",
         props.disabled && "opacity-50",
         size === "sm" && "h-8 py-2 sm:py-1.5",
         className
@@ -61,7 +61,7 @@ function SelectTrigger({
       <Icon
         as={CaretDown}
         aria-hidden={true}
-        className="text-muted-foreground size-4"
+        className="size-4 text-muted-foreground"
       />
     </SelectPrimitive.Trigger>
   )
@@ -93,7 +93,7 @@ function SelectContent({
             <TextClassContext.Provider value="text-popover-foreground">
               <SelectPrimitive.Content
                 className={cn(
-                  "bg-popover border-border relative z-50 min-w-[8rem] rounded-md border shadow-md shadow-black/5",
+                  "relative z-50 min-w-[8rem] rounded-md border border-border bg-popover shadow-black/5 shadow-md",
                   "p-1",
                   position === "popper" && className
                 )}
@@ -121,7 +121,7 @@ function SelectLabel({
   return (
     <SelectPrimitive.Label
       className={cn(
-        "text-muted-foreground px-2 py-2 text-xs sm:py-1.5",
+        "px-2 py-2 text-muted-foreground text-xs sm:py-1.5",
         className
       )}
       {...props}
@@ -137,7 +137,7 @@ function SelectItem({
   return (
     <SelectPrimitive.Item
       className={cn(
-        "active:bg-accent group relative flex w-full flex-row items-center gap-2 rounded-sm py-2 pl-2 pr-8 sm:py-1.5",
+        "group relative flex w-full flex-row items-center gap-2 rounded-sm py-2 pr-8 pl-2 active:bg-accent sm:py-1.5",
         props.disabled && "opacity-50",
         className
       )}
@@ -145,10 +145,10 @@ function SelectItem({
     >
       <View className="absolute right-2 flex size-3.5 items-center justify-center">
         <SelectPrimitive.ItemIndicator>
-          <Icon as={Check} className="text-muted-foreground size-4 shrink-0" />
+          <Icon as={Check} className="size-4 shrink-0 text-muted-foreground" />
         </SelectPrimitive.ItemIndicator>
       </View>
-      <SelectPrimitive.ItemText className="text-foreground group-active:text-accent-foreground select-none text-sm" />
+      <SelectPrimitive.ItemText className="select-none text-foreground text-sm group-active:text-accent-foreground" />
     </SelectPrimitive.Item>
   )
 }
@@ -159,7 +159,7 @@ function SelectSeparator({
 }: React.ComponentProps<typeof SelectPrimitive.Separator>) {
   return (
     <SelectPrimitive.Separator
-      className={cn("bg-border -mx-1 my-1 h-px", className)}
+      className={cn("-mx-1 my-1 h-px bg-border", className)}
       {...props}
     />
   )

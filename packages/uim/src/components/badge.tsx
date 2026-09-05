@@ -5,13 +5,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { View } from "react-native"
 
 const badgeVariants = cva(
-  "border-border group shrink-0 flex-row items-center justify-center gap-1 overflow-hidden rounded-full border px-2 py-0.5",
+  "group shrink-0 flex-row items-center justify-center gap-1 overflow-hidden rounded-full border border-border px-2 py-0.5",
   {
     variants: {
       variant: {
-        default: "bg-primary border-transparent",
-        secondary: "bg-secondary border-transparent",
-        destructive: "bg-destructive border-transparent",
+        default: "border-transparent bg-primary",
+        secondary: "border-transparent bg-secondary",
+        destructive: "border-transparent bg-destructive",
         outline: "",
       },
     },
@@ -21,7 +21,7 @@ const badgeVariants = cva(
   }
 )
 
-const badgeTextVariants = cva("text-xs font-medium", {
+const badgeTextVariants = cva("font-medium text-xs", {
   variants: {
     variant: {
       default: "text-primary-foreground",
