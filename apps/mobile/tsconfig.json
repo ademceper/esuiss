@@ -1,0 +1,10 @@
+{
+  "extends": "@suiss/config/react-library.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./app/*"]
+    }
+  },
+  "include": ["app", "nativewind-env.d.ts", "*.config.js", "expo-env.d.ts"],
+  "exclude": ["node_modules"]
+}
