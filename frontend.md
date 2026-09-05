@@ -82,7 +82,8 @@ Temel kural: **kod ve tasarım tek kaynaktan (single source of truth), güvenlik
 
 **Keycloakify 26**
 
-- Login + account + admin + email temalarının hepsi tek JAR'a paketlenir.
+- **Login + account + admin** temaları tek JAR'a paketlenir.
+- **E-posta teması dahil değildir.** Keycloak'ın e-posta şablonları kullanılmaz; tüm giden e-posta **Novu** üzerinden gider ve şablonlar **React Email** ile yazılır (Bölüm 9, Bölüm 12). Keycloak kendi şablonunu da taşısaydı iki ayrı e-posta şablon kaynağı olurdu — marka değişikliği iki yerden yapılır, biri unutulur. Keycloak'ın e-posta göndermesi gereken akışlar (doğrulama, şifre sıfırlama) Novu'ya yönlendirilir.
 - React tabanlı (Keycloakify'ın en tam entegrasyona sahip yolu).
 - Keycloak sunucu sürümü: **26.7.x** (güncel stable; FAPI 2.0 Final, tam DPoP, entegre passkeys).
 - Kritik avantaj: Keycloakify'ın yeni default görünümü de **shadcn/ui + Tailwind v4** üzerine kurulu — yani login ekranları ile paneller birebir aynı `packages/ui` token ve bileşenlerini paylaşır.
@@ -258,7 +259,7 @@ suiss/
 │  ├─ admin/            # Vite + React + TanStack Router
 │  ├─ web/              # Next.js App Router (BFF)
 │  ├─ mobile/           # Expo SDK 57
-│  ├─ auth/             # Keycloakify 26 (login/account/email temaları)
+│  ├─ auth/             # Keycloakify 26 (login/account/admin temaları)
 │  ├─ docs/             # Fumadocs (genel API referansı + iç doküman)
 │  ├─ notify/           # Novu Dashboard fork (redesign)
 │  ├─ checkout/         # Ortak ödeme sayfası — AYRI ORIGIN
