@@ -4,17 +4,9 @@ import { Icon } from "@suiss/uim/components/icon"
 import { NativeOnlyAnimatedView } from "@suiss/uim/components/native-only-animated-view"
 import { TextClassContext } from "@suiss/uim/components/text"
 import { cn } from "@suiss/uim/lib/utils"
-import { CaretDown, CaretRight, CaretUp, Check } from "phosphor-react-native"
+import { CaretDown, CaretUp, Check } from "phosphor-react-native"
 import * as React from "react"
-import {
-  Platform,
-  Pressable,
-  type StyleProp,
-  StyleSheet,
-  Text,
-  View,
-  type ViewStyle,
-} from "react-native"
+import { Platform, Pressable, StyleSheet, Text, View } from "react-native"
 import { FadeIn, ReduceMotion } from "react-native-reanimated"
 import { FullWindowOverlay as RNFullWindowOverlay } from "react-native-screens"
 
@@ -50,7 +42,7 @@ function Menubar({
 
   return (
     <>
-      {Platform.OS !== "web" && (value || valueProp) ? (
+      {value || valueProp ? (
         <Portal name={`menubar-overlay-${id}`}>
           <Pressable onPress={closeMenu} style={StyleSheet.absoluteFill} />
         </Portal>
@@ -85,9 +77,6 @@ function MenubarTrigger({
       <MenubarPrimitive.Trigger
         className={cn(
           "group flex items-center rounded-md px-2 py-1.5 sm:py-1",
-          Platform.select({
-            web: "focus:bg-accent focus:text-accent-foreground cursor-default outline-none",
-          }),
           value === itemValue && "bg-accent",
           className
         )}
@@ -109,7 +98,7 @@ function MenubarSubTrigger({
   inset?: boolean
 }) {
   const { open } = MenubarPrimitive.useSubContext()
-  const icon = Platform.OS === "web" ? CaretRight : open ? CaretUp : CaretDown
+  const icon = open ? CaretUp : CaretDown
   return (
     <TextClassContext.Provider
       value={cn(
@@ -120,9 +109,6 @@ function MenubarSubTrigger({
       <MenubarPrimitive.SubTrigger
         className={cn(
           "active:bg-accent group flex flex-row items-center rounded-sm px-2 py-2 sm:py-1.5",
-          Platform.select({
-            web: "focus:bg-accent focus:text-accent-foreground cursor-default outline-none [&_svg]:pointer-events-none",
-          }),
           className,
           open && "bg-accent",
           inset && "pl-8"
@@ -151,9 +137,6 @@ function MenubarSubContent({
       <MenubarPrimitive.SubContent
         className={cn(
           "bg-popover border-border overflow-hidden rounded-md border p-1 shadow-lg shadow-black/5",
-          Platform.select({
-            web: "animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 fade-in-0 data-[state=closed]:zoom-out-95 zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-context-menu-content-transform-origin) z-50 min-w-[8rem]",
-          }),
           className
         )}
         {...props}
@@ -186,13 +169,6 @@ function MenubarContent({
             <MenubarPrimitive.Content
               className={cn(
                 "bg-popover border-border min-w-[12rem] overflow-hidden rounded-md border p-1 shadow-lg shadow-black/5",
-                Platform.select({
-                  web: cn(
-                    "animate-in fade-in-0 zoom-in-95 max-h-(--radix-context-menu-content-available-height) origin-(--radix-context-menu-content-transform-origin) z-50 cursor-default",
-                    props.side === "bottom" && "slide-in-from-top-2",
-                    props.side === "top" && "slide-in-from-bottom-2"
-                  ),
-                }),
                 className
               )}
               align={align}
@@ -228,13 +204,6 @@ function MenubarItem({
       <MenubarPrimitive.Item
         className={cn(
           "active:bg-accent group relative flex flex-row items-center gap-2 rounded-sm px-2 py-2 sm:py-1.5",
-          Platform.select({
-            web: cn(
-              "focus:bg-accent focus:text-accent-foreground cursor-default outline-none data-[disabled]:pointer-events-none",
-              variant === "destructive" &&
-                "focus:bg-destructive/10 dark:focus:bg-destructive/20"
-            ),
-          }),
           variant === "destructive" &&
             "active:bg-destructive/10 dark:active:bg-destructive/20",
           props.disabled && "opacity-50",
@@ -259,9 +228,6 @@ function MenubarCheckboxItem({
       <MenubarPrimitive.CheckboxItem
         className={cn(
           "active:bg-accent group relative flex flex-row items-center gap-2 rounded-sm py-2 pl-8 pr-2 sm:py-1.5",
-          Platform.select({
-            web: "focus:bg-accent focus:text-accent-foreground cursor-default outline-none data-[disabled]:pointer-events-none",
-          }),
           props.disabled && "opacity-50",
           className
         )}
@@ -269,13 +235,7 @@ function MenubarCheckboxItem({
       >
         <View className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
           <MenubarPrimitive.ItemIndicator>
-            <Icon
-              as={Check}
-              className={cn(
-                "text-foreground size-4",
-                Platform.select({ web: "pointer-events-none" })
-              )}
-            />
+            <Icon as={Check} className={cn("text-foreground size-4")} />
           </MenubarPrimitive.ItemIndicator>
         </View>
         <>{children}</>
@@ -296,9 +256,6 @@ function MenubarRadioItem({
       <MenubarPrimitive.RadioItem
         className={cn(
           "active:bg-accent group relative flex flex-row items-center gap-2 rounded-sm py-2 pl-8 pr-2 sm:py-1.5",
-          Platform.select({
-            web: "focus:bg-accent focus:text-accent-foreground cursor-default outline-none data-[disabled]:pointer-events-none",
-          }),
           props.disabled && "opacity-50",
           className
         )}

@@ -5,7 +5,6 @@ import { toggleVariants } from "@suiss/uim/components/toggle"
 import { cn } from "@suiss/uim/lib/utils"
 import type { VariantProps } from "class-variance-authority"
 import * as React from "react"
-import { Platform } from "react-native"
 
 const ToggleGroupContext = React.createContext<VariantProps<
   typeof toggleVariants
@@ -23,7 +22,6 @@ function ToggleGroup({
     <ToggleGroupPrimitive.Root
       className={cn(
         "flex flex-row items-center rounded-md shadow-none",
-        Platform.select({ web: "w-fit" }),
         variant === "outline" && "shadow-sm shadow-black/5",
         className
       )}
@@ -66,9 +64,8 @@ function ToggleGroupItem({
     <TextClassContext.Provider
       value={cn(
         "text-sm text-foreground font-medium",
-        ToggleGroupPrimitive.utils.getIsSelected(value, props.value)
-          ? "text-accent-foreground"
-          : Platform.select({ web: "group-hover:text-muted-foreground" })
+        ToggleGroupPrimitive.utils.getIsSelected(value, props.value) &&
+          "text-accent-foreground"
       )}
     >
       <ToggleGroupPrimitive.Item
@@ -88,9 +85,6 @@ function ToggleGroupItem({
           (context.variant === "outline" || variant === "outline") &&
             isFirst &&
             "border-l",
-          Platform.select({
-            web: "flex-1 focus:z-10 focus-visible:z-10",
-          }),
           className
         )}
         {...props}

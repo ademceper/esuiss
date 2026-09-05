@@ -35,13 +35,10 @@ function AlertDialogOverlay({
       <AlertDialogPrimitive.Overlay
         className={cn(
           "absolute bottom-0 left-0 right-0 top-0 z-50 flex items-center justify-center bg-black/50 p-2",
-          Platform.select({
-            web: "animate-in fade-in-0 fixed",
-          }),
           className
         )}
         {...props}
-        asChild={Platform.OS !== "web"}
+        asChild
       >
         <NativeOnlyAnimatedView
           entering={FadeIn.duration(200)
@@ -70,9 +67,6 @@ function AlertDialogContent({
         <AlertDialogPrimitive.Content
           className={cn(
             "bg-background border-border z-50 flex w-full max-w-[calc(100%-2rem)] flex-col gap-4 rounded-lg border p-6 shadow-lg shadow-black/5 sm:max-w-lg",
-            Platform.select({
-              web: "animate-in fade-in-0 zoom-in-95 duration-200",
-            }),
             className
           )}
           {...props}

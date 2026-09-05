@@ -2,7 +2,6 @@ import * as CheckboxPrimitive from "@rn-primitives/checkbox"
 import { Icon } from "@suiss/uim/components/icon"
 import { cn } from "@suiss/uim/lib/utils"
 import { Check } from "phosphor-react-native"
-import { Platform } from "react-native"
 
 const DEFAULT_HIT_SLOP = 24
 
@@ -21,10 +20,7 @@ function Checkbox({
     <CheckboxPrimitive.Root
       className={cn(
         "border-input dark:bg-input/30 size-4 shrink-0 rounded-[4px] border shadow-sm shadow-black/5",
-        Platform.select({
-          web: "focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive peer cursor-default outline-none transition-shadow focus-visible:ring-[3px] disabled:cursor-not-allowed",
-          native: "overflow-hidden",
-        }),
+        "overflow-hidden",
         props.checked && cn("border-primary", checkedClassName),
         props.disabled && "opacity-50",
         className

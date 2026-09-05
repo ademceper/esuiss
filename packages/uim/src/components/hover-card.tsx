@@ -23,10 +23,7 @@ function HoverCardContent({
   return (
     <HoverCardPrimitive.Portal>
       <FullWindowOverlay>
-        <HoverCardPrimitive.Overlay
-          style={Platform.select({ native: StyleSheet.absoluteFill })}
-          asChild={Platform.OS !== "web"}
-        >
+        <HoverCardPrimitive.Overlay style={StyleSheet.absoluteFill} asChild>
           <NativeOnlyAnimatedView
             entering={FadeIn.reduceMotion(ReduceMotion.System)}
             exiting={FadeOut.reduceMotion(ReduceMotion.System)}
@@ -38,13 +35,6 @@ function HoverCardContent({
                 sideOffset={sideOffset}
                 className={cn(
                   "bg-popover border-border outline-hidden z-50 w-64 rounded-md border p-4 shadow-md shadow-black/5",
-                  Platform.select({
-                    web: cn(
-                      "animate-in fade-in-0 zoom-in-95 origin-(--radix-hover-card-content-transform-origin) cursor-default [&>*]:cursor-auto",
-                      props.side === "bottom" && "slide-in-from-top-2",
-                      props.side === "top" && "slide-in-from-bottom-2"
-                    ),
-                  }),
                   className
                 )}
                 {...props}
