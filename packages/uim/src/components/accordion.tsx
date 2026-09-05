@@ -47,7 +47,7 @@ function AccordionItem({
       {...props}
     >
       <Animated.View
-        className="native:overflow-hidden"
+        className="overflow-hidden"
         layout={LinearTransition.duration(200)}
       >
         {children}
@@ -80,7 +80,7 @@ function AccordionTrigger({
   )
 
   return (
-    <TextClassContext.Provider value={cn("text-left text-sm font-medium")}>
+    <TextClassContext.Provider value={"text-left text-sm font-medium"}>
       <AccordionPrimitive.Header>
         <AccordionPrimitive.Trigger {...props} asChild>
           <Pressable
@@ -94,7 +94,7 @@ function AccordionTrigger({
               <Icon
                 as={CaretDown}
                 size={16}
-                className={cn("text-muted-foreground shrink-0")}
+                className={"text-muted-foreground shrink-0"}
               />
             </Animated.View>
           </Pressable>
@@ -111,7 +111,7 @@ function AccordionContent({
 }: React.ComponentProps<typeof AccordionPrimitive.Content>) {
   return (
     <TextClassContext.Provider value="text-sm">
-      <AccordionPrimitive.Content className={cn("overflow-hidden")} {...props}>
+      <AccordionPrimitive.Content className={"overflow-hidden"} {...props}>
         <Animated.View
           exiting={FadeOutUp.duration(200).reduceMotion(ReduceMotion.System)}
           className={cn("pb-4", className)}

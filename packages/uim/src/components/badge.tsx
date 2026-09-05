@@ -5,15 +5,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { View } from "react-native"
 
 const badgeVariants = cva(
-  cn(
-    "border-border group shrink-0 flex-row items-center justify-center gap-1 overflow-hidden rounded-full border px-2 py-0.5"
-  ),
+  "border-border group shrink-0 flex-row items-center justify-center gap-1 overflow-hidden rounded-full border px-2 py-0.5",
   {
     variants: {
       variant: {
-        default: cn("bg-primary border-transparent"),
-        secondary: cn("bg-secondary border-transparent"),
-        destructive: cn("bg-destructive border-transparent"),
+        default: "bg-primary border-transparent",
+        secondary: "bg-secondary border-transparent",
+        destructive: "bg-destructive border-transparent",
         outline: "",
       },
     },

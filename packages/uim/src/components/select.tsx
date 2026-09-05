@@ -101,7 +101,7 @@ function SelectContent({
                 {...props}
               >
                 <SelectPrimitive.Viewport
-                  className={cn("p-1", position === "popper" && cn("w-full"))}
+                  className={cn("p-1", position === "popper" && "w-full")}
                 >
                   {children}
                 </SelectPrimitive.Viewport>

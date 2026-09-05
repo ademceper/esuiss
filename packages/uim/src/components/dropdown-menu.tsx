@@ -188,7 +188,7 @@ function DropdownMenuCheckboxItem({
       >
         <View className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
           <DropdownMenuPrimitive.ItemIndicator>
-            <Icon as={Check} className={cn("text-foreground size-4")} />
+            <Icon as={Check} className={"text-foreground size-4"} />
           </DropdownMenuPrimitive.ItemIndicator>
         </View>
         <>{children}</>
