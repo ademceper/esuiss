@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono, Inter } from "next/font/google"
 
 import "@suiss/ui/globals.css"
 import { cn } from "@suiss/ui/lib/utils"

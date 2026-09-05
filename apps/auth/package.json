@@ -4,7 +4,8 @@
   "description": "Starter for Keycloakify 11",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "keycloakify start-keycloak --keycloak-version 26",
+    "dev:vite": "vite",
     "build": "tsc && vite build",
     "build-keycloak-theme": "pnpm run build && keycloakify build",
     "storybook": "storybook dev -p 6006",
