@@ -404,9 +404,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      lucide-react-native:
-        specifier: ^1.21.0
-        version: 1.41.0(react-native-svg@15.15.4(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4))(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4)
+      phosphor-react-native:
+        specifier: ^3.0.6
+        version: 3.0.6(react-native-svg@15.15.4(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4))(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4)
       tailwind-merge:
         specifier: ^3.5.0
         version: 3.6.0
@@ -5498,13 +5498,6 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-react-native@1.41.0:
-    resolution: {integrity: sha512-iQk/8xRzd5BscNwTRGtiUkTfUfbq9+UT0zkgbLnmWco+T0Diw95TVgntM4j53oB+HBL5oenUFxIWm9TmCxKU7A==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
-      react-native: '*'
-      react-native-svg: ^12.0.0 || ^13.0.0 || ^14.0.0 || ^15.0.0
-
   magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
@@ -5946,6 +5939,13 @@ packages:
 
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
+
+  phosphor-react-native@3.0.6:
+    resolution: {integrity: sha512-mIhv+hBbDWz3yLbTOq/esVUkrMoKzEvLIcSeZo3YTdT+sbOBxzxKg5WZN3wpqt3pkkhKf0wVpOyZ3d9mNBNRhg==}
+    peerDependencies:
+      react: '*'
+      react-native: '*'
+      react-native-svg: '*'
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -9362,7 +9362,9 @@ snapshots:
       metro-runtime: 0.84.6
     transitivePeerDependencies:
       - '@babel/core'
+      - bufferutil
       - supports-color
+      - utf-8-validate
 
   '@react-native/normalize-colors@0.74.89':
     optional: true
@@ -12137,12 +12139,6 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-react-native@1.41.0(react-native-svg@15.15.4(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4))(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4):
-    dependencies:
-      react: 19.2.4
-      react-native: 0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4)
-      react-native-svg: 15.15.4(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4)
-
   magic-string@0.27.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -12669,6 +12665,12 @@ snapshots:
   path-to-regexp@8.4.2: {}
 
   pathe@2.0.3: {}
+
+  phosphor-react-native@3.0.6(react-native-svg@15.15.4(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4))(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4):
+    dependencies:
+      react: 19.2.4
+      react-native: 0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4)
+      react-native-svg: 15.15.4(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.15)(react@19.2.4))(react@19.2.4)
 
   picocolors@1.1.1: {}
 

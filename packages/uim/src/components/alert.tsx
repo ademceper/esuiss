@@ -1,7 +1,7 @@
 import { Icon } from "@suiss/uim/components/icon"
 import { Text, TextClassContext } from "@suiss/uim/components/text"
 import { cn } from "@suiss/uim/lib/utils"
-import type { LucideIcon } from "lucide-react-native"
+import type { Icon as PhosphorIcon } from "phosphor-react-native"
 import * as React from "react"
 import { View } from "react-native"
 
@@ -14,7 +14,7 @@ function Alert({
   ...props
 }: React.ComponentProps<typeof View> &
   React.RefAttributes<View> & {
-    icon: LucideIcon
+    icon: PhosphorIcon
     variant?: "default" | "destructive"
     iconClassName?: string
   }) {

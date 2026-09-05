@@ -2,7 +2,7 @@ import * as AccordionPrimitive from "@rn-primitives/accordion"
 import { Icon } from "@suiss/uim/components/icon"
 import { TextClassContext } from "@suiss/uim/components/text"
 import { cn } from "@suiss/uim/lib/utils"
-import { ChevronDown } from "lucide-react-native"
+import { CaretDown } from "phosphor-react-native"
 import { Platform, Pressable, View } from "react-native"
 import Animated, {
   FadeOutUp,
@@ -106,7 +106,7 @@ function AccordionTrigger({
             <>{children}</>
             <Animated.View style={chevronStyle}>
               <Icon
-                as={ChevronDown}
+                as={CaretDown}
                 size={16}
                 className={cn(
                   "text-muted-foreground shrink-0",

@@ -3,12 +3,7 @@ import { Icon } from "@suiss/uim/components/icon"
 import { NativeOnlyAnimatedView } from "@suiss/uim/components/native-only-animated-view"
 import { TextClassContext } from "@suiss/uim/components/text"
 import { cn } from "@suiss/uim/lib/utils"
-import {
-  Check,
-  ChevronDown,
-  ChevronDownIcon,
-  ChevronUpIcon,
-} from "lucide-react-native"
+import { CaretDown, CaretUp, Check } from "phosphor-react-native"
 import * as React from "react"
 import { Platform, StyleSheet, View } from "react-native"
 import { FadeIn, FadeOut, ReduceMotion } from "react-native-reanimated"
@@ -67,7 +62,7 @@ function SelectTrigger({
     >
       <>{children}</>
       <Icon
-        as={ChevronDown}
+        as={CaretDown}
         aria-hidden={true}
         className="text-muted-foreground size-4"
       />
@@ -227,7 +222,7 @@ function SelectScrollUpButton({
       )}
       {...props}
     >
-      <Icon as={ChevronUpIcon} className="size-4" />
+      <Icon as={CaretUp} className="size-4" />
     </SelectPrimitive.ScrollUpButton>
   )
 }
@@ -251,7 +246,7 @@ function SelectScrollDownButton({
       )}
       {...props}
     >
-      <Icon as={ChevronDownIcon} className="size-4" />
+      <Icon as={CaretDown} className="size-4" />
     </SelectPrimitive.ScrollDownButton>
   )
 }

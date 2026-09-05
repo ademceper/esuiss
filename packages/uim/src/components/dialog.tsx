@@ -2,7 +2,7 @@ import * as DialogPrimitive from "@rn-primitives/dialog"
 import { Icon } from "@suiss/uim/components/icon"
 import { NativeOnlyAnimatedView } from "@suiss/uim/components/native-only-animated-view"
 import { cn } from "@suiss/uim/lib/utils"
-import { X } from "lucide-react-native"
+import { X } from "phosphor-react-native"
 import * as React from "react"
 import {
   type GestureResponderEvent,

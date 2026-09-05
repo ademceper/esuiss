@@ -3,12 +3,7 @@ import { Icon } from "@suiss/uim/components/icon"
 import { NativeOnlyAnimatedView } from "@suiss/uim/components/native-only-animated-view"
 import { TextClassContext } from "@suiss/uim/components/text"
 import { cn } from "@suiss/uim/lib/utils"
-import {
-  Check,
-  ChevronDown,
-  ChevronRight,
-  ChevronUp,
-} from "lucide-react-native"
+import { CaretDown, CaretRight, CaretUp, Check } from "phosphor-react-native"
 import * as React from "react"
 import {
   Platform,
@@ -45,8 +40,7 @@ function DropdownMenuSubTrigger({
   inset?: boolean
 }) {
   const { open } = DropdownMenuPrimitive.useSubContext()
-  const icon =
-    Platform.OS === "web" ? ChevronRight : open ? ChevronUp : ChevronDown
+  const icon = Platform.OS === "web" ? CaretRight : open ? CaretUp : CaretDown
   return (
     <TextClassContext.Provider
       value={cn(
