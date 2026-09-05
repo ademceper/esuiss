@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Expo (React Native app)",
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "isolatedModules": true,
+    "noUncheckedIndexedAccess": true
+  }
+}

@@ -5,5 +5,13 @@
   "license": "PROPRIETARY",
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "expo": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
   }
 }
